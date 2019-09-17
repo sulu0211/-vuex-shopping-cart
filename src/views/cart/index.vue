@@ -20,7 +20,7 @@
         <template slot-scope="scope">
           <el-checkbox
             size="mini"
-            :value="scope.row.isChecked"
+             :value="scope.row.isChecked"
             @change="onIsCheckedChange(scope.row, $event)"
           ></el-checkbox>
         </template>
@@ -78,7 +78,11 @@ export default {
 
   },
   methods: {
-    ...mapMutations('cart', ['deleteProduct'])
+    ...mapMutations('cart', ['deleteProduct', 'updateProductChecked']),
+    onIsCheckedChange (product, checked) {
+      // console.log(product,checked)
+      this.updateProductChecked({ product, checked })
+    }
   }
 }
 </script>

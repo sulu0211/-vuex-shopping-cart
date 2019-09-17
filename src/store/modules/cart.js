@@ -27,6 +27,7 @@ const getters = {
     })
     return price
   }
+
 }
 const mutations = {
   // 删除商品
@@ -52,6 +53,15 @@ const mutations = {
       })
     }
     // console.log(product)
+  },
+  /**
+   * 更新商品的选中状态
+   * 注意：mutation 只能接受一个参数
+   *
+   */
+  updateProductChecked (state, payload) {
+    // console.log(payload)
+    payload.product.isChecked = payload.checked
   }
 }
 const actions = {}
