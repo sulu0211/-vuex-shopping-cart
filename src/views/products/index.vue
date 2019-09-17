@@ -44,16 +44,15 @@ export default {
   computed: {
     ...mapState('products', ['allProducts'])
   },
-
-  created () {
-    // 1. 调用 action
-    // this.$store.dispatch('action函数')
-    this.getAllProducts()
-  },
-
   methods: {
     ...mapActions('products', ['getAllProducts']),
     ...mapMutations('cart', ['addToCart'])
+  },
+
+  created () {
+    // 1.发起action
+    // this.$store.dispatch(action函数)
+    this.getAllProducts()
   }
 }
 </script>

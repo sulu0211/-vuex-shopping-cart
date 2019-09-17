@@ -59,24 +59,11 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
 
+import { mapState } from 'vuex'
 export default {
   name: 'CartIndex',
-  computed: {
-    ...mapState('cart', ['cartProducts'])
-  },
-  methods: {
-    ...mapMutations('cart', ['deleteProduct', 'updateProductChecked']),
-    onIsCheckedChange (product, checked) {
-      // product.isChecked = checked
-      // console.log(product, checked)
-      this.updateProductChecked({
-        product,
-        checked
-      })
-    }
-  }
+
   // data () {
   //   return {
   //     cartProducts: [
@@ -86,6 +73,9 @@ export default {
   //     ]
   //   }
   // }
+  computed: {
+    ...mapState('cart', ['cartProducts'])
+  }
 }
 </script>
 

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import cart from './modules/cart'
-import products from './modules/products'
+import cart from './modules/cart' // 引入模块
+import products from './modules/products' // 引入模块
 
 Vue.use(Vuex)
 
