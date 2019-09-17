@@ -60,7 +60,7 @@
 
 <script>
 
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'CartIndex',
 
@@ -75,6 +75,10 @@ export default {
   // }
   computed: {
     ...mapState('cart', ['cartProducts'])
+
+  },
+  methods: {
+    ...mapMutations('cart', ['deleteProduct'])
   }
 }
 </script>
